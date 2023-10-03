@@ -14,36 +14,38 @@
                 </div>
                 <div v-else>
                     <div class="card-title">History</div>
-                    <table class="activity-table">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Total Question</th>
-                                <th>Correct</th>
-                                <th>Wrong</th>
-                                <th>Empty</th>
-                                <th>Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr
-                                v-for="(activity, index) in activities.sort(
-                                    (a, b) =>
-                                        new Date(b.date) - new Date(a.date)
-                                )"
-                                :key="index"
-                            >
-                                <td>{{ index + 1 }}</td>
-                                <td>{{ activity.questions?.length }}</td>
-                                <td>{{ getCorrectCount(activity) }}</td>
-                                <td>{{ getWrongCount(activity) }}</td>
-                                <td>{{ getEmptyCount(activity) }}</td>
-                                <td>
-                                    {{ new Date(activity.date).toLocaleString() }}
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div style="overflow-x:auto;">
+                        <table class="activity-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Total Question</th>
+                                    <th>Correct</th>
+                                    <th>Wrong</th>
+                                    <th>Empty</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    v-for="(activity, index) in activities.sort(
+                                        (a, b) =>
+                                            new Date(b.date) - new Date(a.date)
+                                    )"
+                                    :key="index"
+                                >
+                                    <td>{{ index + 1 }}</td>
+                                    <td>{{ activity.questions?.length }}</td>
+                                    <td>{{ getCorrectCount(activity) }}</td>
+                                    <td>{{ getWrongCount(activity) }}</td>
+                                    <td>{{ getEmptyCount(activity) }}</td>
+                                    <td>
+                                        {{ new Date(activity.date).toLocaleString() }}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
