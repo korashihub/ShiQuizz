@@ -13,6 +13,13 @@
             </div>
         </header>
         <slot></slot>
+        <div class="m-nav">
+            <div class="m-nav-wrapper">
+                <router-link to="/">Home</router-link>
+                <router-link to="/create-quizz">Take a Quizz</router-link>
+                <router-link to="/activity">Activity</router-link>
+            </div>
+        </div>
     </div>
 </template>
 <script>
