@@ -5,7 +5,6 @@ ShiQuizz is a web application that allows users to participate in quizzes. It ut
 ## Project Information
 
 - **Project Name**: ShiQuizz
-- **Created By**: Mertcan Ulusoy
 - **Demo Link**: [ShiQuizz Demo](https://shiquizz.netlify.app/)
 
 ## Technologies Used
